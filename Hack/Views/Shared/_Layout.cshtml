@@ -6,37 +6,100 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Rajdhani" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+  
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+<header id="header" class="header">
+    <div class="topheader">
+        <div><h1 class="mmh mr-auto">
+            YourHelper
+        </h1></div>
+        <div><p class="mmhtext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae saepe, quo similique veritatis cum suscipit, illo ab aliquid recusandae repellat odit quod consectetur animi error, obcaecati ipsam eos sapiente praesentium.</p></div></div>
+    <a href="#twosection" id="but">
+
+        <button class="ghost-button headerbutton">Check
+        </button>
+    </a>
+</header>
+<div class="twosection" id="twosection" name="twosection">
+    <div class="containerr js-show-form">
+        <div class="row">
+            <div class="buttons">
+                <div class="but1">
+                    <div class="col-lg-4 ">
+                        <button class="ghost-button circle ">Spot
+                        </button>
+                    </div>
+                </div>
+                <div class="but2">
+                    <div class="col-lg-4 ">
+                        <button class="ghost-button  circle">Recipes
+                        </button>
+                    </div>
+                </div>
+                <div class="but3">
+                    <div class="col-lg-4 ">
+                        <button class="ghost-button  circle">Alco
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <div class="container">
+            @RenderBody()
+        </div>
+   
+</div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@*<script src ="~/Scripts/jquery.unobtrusive-ajax.js"></script>*@
+<script>
+    (function main() {
+        document.addEventListener('DOMContentLoaded', DOMContentLoaded);
+        function DOMContentLoaded() {
+            var buttonNode = document.querySelector('.js-show-form');
+            buttonNode.addEventListener('click', showForm);
+        }
+    
+        function showForm() {
+            var node = document.querySelector('.js-form');
+            node.classList.remove('hidden');
+        }
+    })();
+</script>
+<script >
+    var linkNav = document.querySelectorAll('[href^="#"]')
+    V = 1; 
+    for (var i = 0; i < linkNav.length; i++) {
+        linkNav[i].addEventListener('click', function(e) { 
+            e.preventDefault(); 
+            var w = window.pageYOffset,  
+                hash = this.href.replace(/[^#]*(.*)/, '$1');  
+            t = document.querySelector(hash).getBoundingClientRect().top,  
+                start = null;
+            requestAnimationFrame(step);  
+            function step(time) {
+                if (start === null) start = time;
+                var progress = time - start,
+                    r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
+                window.scrollTo(0,r);
+                if (r != w + t) {
+                    requestAnimationFrame(step)
+                } else {
+                    location.hash = hash  
+                }
+            }
+        }, false);
+    }
+
+</script>
+@RenderSection("scripts", required: false)
 </body>
 </html>

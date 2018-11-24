@@ -1,0 +1,149 @@
+* {
+    outline: none !important
+}
+
+.header {
+
+    background: url(8.jpg) no-repeat center top/cover;
+    height: 753px;
+}
+
+.containerr {
+    margin: auto;
+    width: 1031px;
+    
+}
+
+.topheader {
+    display: block;
+    position: absolute;
+    margin-top: 175px;
+    left: 21%;
+}
+.tt
+{
+    border-radius: 40px;
+}
+.result{
+  
+    
+}
+.headerbutton {
+    position: absolute;
+    left: 545px;
+    top: 560px;
+}
+
+    .headerbutton:active {
+        text-decoration: none;
+    }
+
+.mmh {
+    color: #fff;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    margin-left: 70px;
+    font-size: 125px;
+}
+
+.mmhtext {
+    color: #fff;
+    text-align: center;
+    font-size: 22px;
+    width: 640px;
+    margin-left: 9%;
+    margin-top: 29px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.ghost-button {
+    display: inline-block;
+    width: 200px;
+    padding: 8px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    border-radius: 26px;
+    font-family: 'Righteous', cursive;
+    font-size: 40px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+    .ghost-button:hover {
+        outline: none;
+    }
+
+    .ghost-button:active {
+        background-color: transparent;
+        color: #fff;
+       
+      
+    }
+
+.textcss {
+    color: #fff;
+    font-family: 'Comfortaa', cursive;
+}
+
+.formggwp {
+    margin-top: -566px;
+    margin-left: 300px;
+}
+
+.twosection {
+    background: url(2.jpg) no-repeat center top/cover;
+    height: 700px;
+}
+
+::placeholder {
+    color: #fff;
+    text-align: center;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    font-size: 50px;
+    color: #fff;
+    line-height: 200px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+.send {
+    position: absolute;
+    top: 820px;
+    left: 920px;
+    border-color: transparent;
+    height: 40px;
+    cursor: pointer;
+}
+
+}
+
+.gg {
+    background: url(../img/11.png);
+}
+
+.hidden {
+    display: none;
+}
+
+.but1 {
+    margin-top: 25px;
+}
+
+.but2 {
+    margin-top: 25px;
+}
+
+.but3 {
+    margin-top: 25px;
+}

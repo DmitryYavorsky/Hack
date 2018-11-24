@@ -1,0 +1,12 @@
+﻿@model Hack.Models.ViewModel
+      @using (Ajax.BeginForm("ShowResult","Home",new AjaxOptions {
+        HttpMethod = "GET",
+        UpdateTargetId = "ShowText"
+    }))
+   
+    { 
+        @Html.DropDownListFor(m => m.SpotId, Model.spots as SelectList)
+        @Html.DropDownListFor(m=>m.SurfaceId,Model.surfaces as SelectList)
+
+        <input type="submit" value="Подтвердить" class="btn btn-success mt-2"/>
+    }
